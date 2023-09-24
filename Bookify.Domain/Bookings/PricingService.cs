@@ -16,7 +16,7 @@ public class PricingService
         decimal percentageUpCharge = 0;
         foreach (var amenity in apartment.Amenities)
         {
-            percentageUpCharge += amenity switch
+            percentageUpCharge += amenity switch 
             {
                 Amenity.GardenView or Amenity.MountainView => 0.05m,
                 Amenity.AirConditioning => 0.01m,

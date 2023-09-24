@@ -8,8 +8,17 @@ using System.Threading.Tasks;
 
 namespace Bookify.Application.Abstractions.Messaging
 {
-    public interface IQueryHandler<TQuery, TResponse> : IRequestHandler<TQuery, Result<TResponse>>
-     where TQuery : IQuery<TResponse>
+    public  interface ICommand : IRequest<Result>, IBaseComand
     {
+
+    }
+
+    public interface ICommand<TResponse> : IRequest<Result<TResponse>>, IBaseComand
+    {
+
+    }
+    public interface IBaseComand
+    {
+
     }
 }

@@ -6,14 +6,14 @@ namespace Bookify.Domain.Apartments;
 public sealed class Apartment : Entity<ApartmentId>
 {
     public Apartment(
-        ApartmentId id,
+        ApartmentId Id,
         Name name,
         Description description,
         Address address,
         Money price,
         Money cleaningFee,
         List<Amenity> amenities)
-        : base(id)
+        : base(Id)
     {
         Name = name;
         Description = description;

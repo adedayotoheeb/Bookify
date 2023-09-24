@@ -10,7 +10,7 @@ public record DateRange
 
     public DateOnly End { get; init; }
 
-    public int LengthInDays => End.DayNumber - Start.DayNumber;
+    public int LengthInDays => End.DayNumber  - Start.DayNumber;
 
     public static DateRange Create(DateOnly start, DateOnly end)
     {
